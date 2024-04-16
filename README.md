@@ -49,15 +49,10 @@ The PicMagic GUI is an ImageProcessing Gui is designed to provide users with a u
           SOURCES ImageProcessor.h Image_Class.h stb_image.h stb_image_write.h
 
       RESOURCES
-          assets/images/parots.bmp
-          assets/images/House.bmp
-          assets/images/gamma_adjusted_image.jpg
-          assets/images/luffy.jpg
           build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/temporary_file.jpg
-          assets/images/image.png
           assets/images/image1.png
           assets/images/log.jpg
-     )
+      )
      ```
 3) Do not change anything or file not mentioned here
 # Contributors
