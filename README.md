@@ -1,5 +1,7 @@
 # PicMagic_Gui V1
+<div style="text-align: justify;">
 The PicMagic GUI is an ImageProcessing Gui is designed to provide users with a user-friendly interface for performing various image processing tasks. It allows users to load images in different formats (such as JPEG, JPG, PNG, BMP) and provides them with tools to manipulate and enhance these images.
+</div>
 # Notes
 1) The project was implemented using Qt Framework and C++ programming language
 2) The filters implemented in the GUI are: [GrayScale, Black & White, Invert image, Merge two images, Flip image, Rotate image, Resize image, Crop image, Darken & Lighten, Frame in image,Detect image Edges, Blur image, Purple filter, Infrared filter, Old_tv filter, Sunlight filter, Oil painting filter, Image Skewing Filter, Night Vision Filter, Noise Filter]
