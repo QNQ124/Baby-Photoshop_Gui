@@ -22,13 +22,7 @@ qt_add_qml_module(appFirst_GUI
         SOURCES ImageProcessor.h Image_Class.h stb_image.h stb_image_write.h
 
     RESOURCES
-        assets/images/parots.bmp
-        assets/images/House.bmp
-        assets/images/gamma_adjusted_image.jpg
-        assets/images/luffy.jpg
-        assets/images/abstract-bp-initials-monogram-logo-design-icon-business-template-simple-elegant_619996-90.jpg
         build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/temporary_file.jpg
-        assets/images/image.png
         assets/images/image1.png
         assets/images/log.jpg
 )

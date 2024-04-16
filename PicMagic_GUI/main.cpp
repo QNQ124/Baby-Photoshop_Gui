@@ -33,8 +33,6 @@ int main(int argc, char *argv[])
 
     QGuiApplication app(argc, argv);
 
-    app.setWindowIcon(QIcon("assets/images/image.png"));
-
     QQmlApplicationEngine engine;
 
     // Expose the ImageProcessor object to QML

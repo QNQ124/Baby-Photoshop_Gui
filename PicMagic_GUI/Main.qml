@@ -6,8 +6,10 @@ import Qt.labs.folderlistmodel
 
 Window {
 
-    width: 1120
-    height: 520
+    maximumWidth: 1120
+    maximumHeight: 520
+    minimumWidth: 1120
+    minimumHeight: 520
 
     visible: true
     title: qsTr("PicMagic")

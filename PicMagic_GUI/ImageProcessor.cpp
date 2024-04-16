@@ -202,7 +202,7 @@ int Noise_Filter(string filename){
             for (int k = 0; k < photo.channels; k++) {
 
                 // Generate a random factor to multiply the pixel value by
-                double factor = 1.11 + (-1 * (rand() % 121) / 255.0);
+                double factor = 1.11 + (-1 * (rand() % 86) / 255.0);
                 int new_value = photo(i, j, k) * factor;
                 photo(i, j, k) = int(max(0, min(255, new_value))); // Check range of RGB and Modify it
 
