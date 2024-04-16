@@ -451,7 +451,7 @@ build .qt_plugins/Qt6_QmlPlugins_Imports_appFirst_GUI.cmake | ${cmake_ninja_work
 #############################################
 # Phony custom command for CMakeFiles\appFirst_GUI_autogen_timestamp_deps
 
-build CMakeFiles/appFirst_GUI_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/appFirst_GUI_autogen_timestamp_deps: phony D$:/Qt/6.7.0/mingw_64/./bin/moc.exe D$:/Qt/6.7.0/mingw_64/lib/libQt6Qml.a D$:/Qt/6.7.0/mingw_64/lib/libQt6Quick.a
+build CMakeFiles/appFirst_GUI_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/appFirst_GUI_autogen_timestamp_deps: phony D$:/Qt/6.7.0/mingw_64/lib/libQt6Quick.a D$:/Qt/6.7.0/mingw_64/./bin/moc.exe D$:/Qt/6.7.0/mingw_64/lib/libQt6Qml.a
 
 
 #############################################

@@ -7,13 +7,15 @@
 #define sv saveImage      // Define a shorthand for saveImage method
 #define uint unsigned int // Define uint as an alias for unsigned int
 #define gp getPixel       // Define a shorthand for getPixel method
+
+
 using namespace std;
 
 int GrayScale_Filter(const string &filename) {
+
     // Load the image
     string filename1 = filename.substr(8, filename.size() - 1);
 
-    cout << filename << endl << filename1 << endl;
 
     Image image(filename1);
 
@@ -34,9 +36,8 @@ int GrayScale_Filter(const string &filename) {
             }
         }
     }
-    cout << filename1 << endl;
-        // sv the grayscale image
-    image.sv("temporary_file.jpg"); // Save the grayscale image with a new filename
+        // sv the image
+    image.sv("temporary_file.jpg"); // Save the image with a new filename
 
     return 0; // Return value as needed
 }
@@ -46,8 +47,6 @@ int BlackAndWhite_Filter(const string &filename)
 {
 
     string filename1 = filename.substr(8, filename.size() - 1);
-
-    cout << filename << endl << filename1 << endl;
 
     // Load the image
     Image image(filename1);
@@ -69,9 +68,8 @@ int BlackAndWhite_Filter(const string &filename)
             }
         }
     }
-    cout << filename1 << endl;
-        // sv the grayscale image
-    image.sv("temporary_file.jpg"); // Save the grayscale image with a new filename
+        // sv the image
+    image.sv("temporary_file.jpg"); // Save the image with a new filename
 
     return 0; // Return value as needed
 }
@@ -79,8 +77,6 @@ int BlackAndWhite_Filter(const string &filename)
 int Purple_Filter(const string &filename){
 
     string filename1 = filename.substr(8, filename.size() - 1);
-
-    cout << filename << endl << filename1 << endl;
 
     // Load the input image
     Image photo(filename1);
@@ -111,9 +107,8 @@ int Purple_Filter(const string &filename){
             photo.setPixel(i, j, 2, blue); // Blue channel
         }
     }
-    cout << filename1 << endl;
-        // sv the grayscale image
-    photo.sv("temporary_file.jpg"); // Save the grayscale image with a new filename
+        // sv the image
+    photo.sv("temporary_file.jpg"); // Save the image with a new filename
 
     return 0; // Return value as needed
 }
@@ -122,8 +117,6 @@ int Purple_Filter(const string &filename){
 int Invert_Filter(const string &filename){
 
     string filename1 = filename.substr(8, filename.size() - 1);
-
-    cout << filename << endl << filename1 << endl;
 
     // Load the image
     Image image(filename1);
@@ -145,9 +138,8 @@ int Invert_Filter(const string &filename){
             }
         }
     }
-    cout << filename1 << endl;
-        // sv the grayscale image
-    image.sv("temporary_file.jpg"); // Save the grayscale image with a new filename
+        // sv the  image
+    image.sv("temporary_file.jpg"); // Save the image with a new filename
 
     return 0; // Return value as needed
 }
@@ -157,7 +149,6 @@ int Infrared_Filter(const string &filename){
 
     string filename1 = filename.substr(8, filename.size() - 1);
 
-    cout << filename << endl << filename1 << endl;
     // load image
     Image image(filename1);
 
@@ -180,9 +171,9 @@ int Infrared_Filter(const string &filename){
             }
         }
     }
-    cout << filename1 << endl;
-        // sv the grayscale image
-    image.sv("temporary_file.jpg"); // Save the grayscale image with a new filename
+
+        // sv the image
+    image.sv("temporary_file.jpg"); // Save the image with a new filename
 
     return 0; // Return value as needed
 }
@@ -192,7 +183,6 @@ int Noise_Filter(string filename){
 
     string filename1 = filename.substr(8, filename.size() - 1);
 
-    cout << filename << endl << filename1 << endl;
     // load image
     Image photo(filename1);
 
@@ -202,16 +192,16 @@ int Noise_Filter(string filename){
             for (int k = 0; k < photo.channels; k++) {
 
                 // Generate a random factor to multiply the pixel value by
-                double factor = 1.11 + (-1 * (rand() % 121) / 255.0);
+                double factor = 1.11 + (-1 * (rand() % 86) / 255.0);
                 int new_value = photo(i, j, k) * factor;
                 photo(i, j, k) = int(max(0, min(255, new_value))); // Check range of RGB and Modify it
 
             }
         }
     }
-    cout << filename1 << endl;
-        // sv the grayscale image
-    photo.sv("temporary_file.jpg"); // Save the grayscale image with a new filename
+
+        // sv the  image
+    photo.sv("temporary_file.jpg"); // Save the image with a new filename
 
     return 0; // Return value as needed
 }
@@ -221,7 +211,6 @@ int NightVision_Filter(const string &filename){
 
     string filename1 = filename.substr(8, filename.size() - 1);
 
-    cout << filename << endl << filename1 << endl;
     // load image
     Image photo(filename1);
 
@@ -245,9 +234,8 @@ int NightVision_Filter(const string &filename){
             }
         }
     }
-    cout << filename1 << endl;
-        // sv the grayscale image
-    photo.sv("temporary_file.jpg"); // Save the grayscale image with a new filename
+        // sv the image
+    photo.sv("temporary_file.jpg"); // Save the image with a new filename
 
     return 0; // Return value as needed
 }
@@ -256,8 +244,6 @@ int NightVision_Filter(const string &filename){
 int Detect_Image_Edges(const string &filename){
 
     string filename1 = filename.substr(8, filename.size() - 1);
-
-    cout << filename << endl << filename1 << endl;
 
     // load image
     Image image(filename1);
@@ -298,10 +284,8 @@ int Detect_Image_Edges(const string &filename){
             }
         }
     }
-    cout << filename1 << endl;
-
-        // sv the grayscale image
-    image.sv("temporary_file.jpg"); // Save the grayscale image with a new filename
+        // sv the image
+    image.sv("temporary_file.jpg"); // Save the image with a new filename
 
     return 0; // Return value as needed
 }
@@ -309,43 +293,33 @@ int Detect_Image_Edges(const string &filename){
 // OilPainting Filter function
 int OilPainting_Filter(const string &filename){
 
-    string filename1 = filename.substr(8, filename.size() - 1);
+    ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0); // for less time
 
-    cout << filename << endl << filename1 << endl;
+    string filename1 = filename.substr(8, filename.size() - 1);
 
     // load image
     Image image(filename1);
 
     // Set the radius of the painting effect
     int radius = 1;
-    int intensity_levels = 10;
-
     int height = image.height;
     int width = image.width;
-    // Initialize arrays to store intensity count and average color values
-    int intensityCount[10] = {0};
-    int averageR[10] = {0};
-    int averageG[10] = {0};
-    int averageB[10] = {0};
+    const int num_intensity_levels = 10;
 
-    // Apply the oil painting effect to the image
     for (int i = radius; i < width - radius; i++) {
         for (int j = radius; j < height - radius; j++) {
-            // Reset the arrays for each pixel
-            memset(intensityCount, 0, sizeof(intensityCount));
-            memset(averageR, 0, sizeof(averageR));
-            memset(averageG, 0, sizeof(averageG));
-            memset(averageB, 0, sizeof(averageB));
+            int intensityCount[num_intensity_levels] = {0};
+            int averageR[num_intensity_levels] = {0};
+            int averageG[num_intensity_levels] = {0};
+            int averageB[num_intensity_levels] = {0};
 
-            // Compute intensity levels and update counts and averages
+            // Calculate the average intensity and color values for each pixel in the neighborhood
             for (int k = -radius; k <= radius; ++k) {
                 for (int l = -radius; l <= radius; ++l) {
-                    int r =  image.gp(i + k,j + l,0);
-                    int g =  image.gp(i + k,j + l,1);
-                    int b =  image.gp(i + k,j + l,2);
-                    int intensity = (((r+g+b)/3)* intensity_levels )/ 255;
-                    if( intensity > 255 )
-                        intensity = 255;
+                    int r = image.getPixel(i + k, j + l, 0);
+                    int g = image.getPixel(i + k, j + l, 1);
+                    int b = image.getPixel(i + k, j + l, 2);
+                    int intensity = (((r+g+b)/3)* num_intensity_levels )/ 255; // Use floating-point arithmetic for accuracy
                     int bin = intensity;
                     intensityCount[bin]++;
                     averageR[bin] += r;
@@ -354,27 +328,22 @@ int OilPainting_Filter(const string &filename){
                 }
             }
 
-            // Find the most frequent intensity level
+            // Find the intensity level with the maximum count
             int current_max = 0;
             int max_index = 0;
-            for( int nI = 0; nI < intensity_levels; nI++ )
-            {
-                if( intensityCount[nI] > current_max )
-                {
+            for (int nI = 0; nI < num_intensity_levels; nI++) {
+                if (intensityCount[nI] > current_max) {
                     current_max = intensityCount[nI];
                     max_index = nI;
                 }
             }
 
-            // Set the pixel to the average color of the most frequent intensity level
-            image(i ,j ,0) = averageR[max_index];
-            image(i ,j ,1) = averageG[max_index];
-            image(i ,j ,2) = averageB[max_index];
-
+            // Set the pixel color to the average color of the most frequent intensity level
+            image(i, j, 0) = averageR[max_index] / current_max;
+            image(i, j, 1) = averageG[max_index] / current_max;
+            image(i, j, 2) = averageB[max_index] / current_max;
         }
     }
-
-    cout << filename1 << endl;
 
     // sv the grayscale image
     image.sv("temporary_file.jpg"); // Save the grayscale image with a new filename
@@ -386,8 +355,6 @@ int OilPainting_Filter(const string &filename){
 int Sunlight_Filter(const string &filename){
 
     string filename1 = filename.substr(8, filename.size() - 1);
-
-    cout << filename << endl << filename1 << endl;
 
     // load image
     Image f1(filename1);
@@ -423,10 +390,9 @@ int Sunlight_Filter(const string &filename){
             }
         }
     }
-    cout << filename1 << endl;
 
     // sv the image
-    image.sv("temporary_file.jpg"); // Save the grayscale image with a new filename
+    image.sv("temporary_file.jpg"); // Save the image with a new filename
 
     return 0; // Return value as needed
 }
@@ -435,8 +401,6 @@ int Sunlight_Filter(const string &filename){
 int Old_TV_Filter(const string &filename) {
 
     string filename1 = filename.substr(8, filename.size() - 1);
-
-    cout << filename << endl << filename1 << endl;
 
     // load image
     Image image(filename1);
@@ -474,10 +438,8 @@ int Old_TV_Filter(const string &filename) {
         }
     }
 
-    cout << filename1 << endl;
-
     // sv the image
-    image.sv("temporary_file.jpg"); // Save the grayscale image with a new filename
+    image.sv("temporary_file.jpg"); // Save the image with a new filename
 
     return 0; // Return value as needed
 }
@@ -593,7 +555,6 @@ int Merge_2_Images(const string &filename1, const string &filename2,const int &c
         }
     }
 
-    cout << filename1 << endl << filename2 << endl;
     return 0;
 }
 
@@ -625,10 +586,8 @@ int Resize_Image(const string &filename, const int &new_width, const int &new_he
         }
     }
 
-    cout << filename1 << endl;
-
     // sv the image
-    new_image.sv("temporary_file.jpg"); // Save the grayscale image with a new filename
+    new_image.sv("temporary_file.jpg"); // Save the image with a new filename
 
     return 0; // Return value as needed
 }
@@ -637,8 +596,6 @@ int Resize_Image(const string &filename, const int &new_width, const int &new_he
 int Flip_Image(const string &filename, const int &choice){
 
     string filename1 = filename.substr(8, filename.size() - 1);
-
-    cout << filename << endl << filename1 << endl;
 
     Image image(filename1); // Load the image
 
@@ -684,10 +641,8 @@ int Flip_Image(const string &filename, const int &choice){
 
     }
 
-    cout << filename1 << endl;
-
     // sv the image
-    image.sv("temporary_file.jpg"); // Save the grayscale image with a new filename
+    image.sv("temporary_file.jpg"); // Save the image with a new filename
 
     return 0; // Return value as needed
 }
@@ -697,8 +652,6 @@ int Skewing_Filter(const string &filename, const int &angle){
 
      // Initial variables and load image
     string filename1 = filename.substr(8, filename.size() - 1);
-
-    cout << filename << endl << filename1 << endl;
 
     Image pic(filename1);
 
@@ -730,10 +683,8 @@ int Skewing_Filter(const string &filename, const int &angle){
         }
     }
 
-    cout << filename1 << endl;
-
     // save the image
-    image.sv("temporary_file.jpg"); // Save the grayscale image with a new filename
+    image.sv("temporary_file.jpg"); // Save the image with a new filename
 
     return 0; // Return value as needed
 }
@@ -743,8 +694,6 @@ int Rotate_Image(const string &filename, const int &degree_rotation){
 
     // Initial variables and load image
     string filename1 = filename.substr(8, filename.size() - 1);
-
-    cout << filename << endl << filename1 << endl;
 
     Image image(filename1);
 
@@ -808,10 +757,10 @@ int Rotate_Image(const string &filename, const int &degree_rotation){
 // Blur image function
 int Blur_Image(const string &filename, int blur_level){
 
+    ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0); // for less time
+
     // Initial variables and load image
     string filename1 = filename.substr(8, filename.size() - 1);
-
-    cout << filename << endl << filename1 << endl;
 
     Image photo(filename1);
 
@@ -901,10 +850,8 @@ int Blur_Image(const string &filename, int blur_level){
         }
     }
 
-    cout << filename1 << endl;
-
     // save the image
-    new_image1.sv("temporary_file.jpg"); // Save the grayscale image with a new filename
+    new_image1.sv("temporary_file.jpg"); // Save the image with a new filename
 
     return 0; // Return value as needed
 }
@@ -914,8 +861,6 @@ int DarkenAndLighten_image(const string &filename, int num_brightness, int choic
 
     // Initial variables and load image
     string filename1 = filename.substr(8, filename.size() - 1);
-
-    cout << filename << endl << filename1 << endl;
 
     double factor;
     Image image(filename1);
@@ -940,8 +885,6 @@ int DarkenAndLighten_image(const string &filename, int num_brightness, int choic
         }
     }
 
-    cout << filename1 << endl;
-
     // save the image
     image.sv("temporary_file.jpg"); // Save the image with a new filename
 
@@ -953,8 +896,6 @@ int Frame_to_Image(const string &filename, int choice, int color){
 
     // Initial variables and load image
     string filename1 = filename.substr(8, filename.size() - 1);
-
-    cout << filename << endl << filename1 << endl;
 
     Image photo(filename1);
 
@@ -1101,7 +1042,7 @@ int Frame_to_Image(const string &filename, int choice, int color){
         // Save the framed photo
         framed_photo.saveImage("temporary_file.jpg");
     }
-    cout << filename1 << endl;
+
     return 0;
 }
 
@@ -1109,8 +1050,6 @@ int checkWidth_ForCrop(const string &filename){
 
     // Initial variables and load image
     string filename1 = filename.substr(8, filename.size() - 1);
-
-    cout << filename << endl << filename1 << endl;
 
     Image photo(filename1);
 
@@ -1122,8 +1061,6 @@ int checkHeight_ForCrop(const string &filename){
     // Initial variables and load image
     string filename1 = filename.substr(8, filename.size() - 1);
 
-    cout << filename << endl << filename1 << endl;
-
     Image photo(filename1);
 
     return photo.height;
@@ -1134,8 +1071,6 @@ int Crop_Image(const string &filename, int crop_width, int crop_height, int crop
 
     // Initial variables and load image
     string filename1 = filename.substr(8, filename.size() - 1);
-
-    cout << filename << endl << filename1 << endl;
 
     Image image(filename1);
     // Create a new image to store the cropped portion
@@ -1154,10 +1089,8 @@ int Crop_Image(const string &filename, int crop_width, int crop_height, int crop
         x++;
     }
 
-    cout << filename1 << endl;
-
     // save the image
-    cropped_image.sv("temporary_file.jpg"); // Save the grayscale image with a new filename
+    cropped_image.sv("temporary_file.jpg"); // Save the image with a new filename
 
     return 0; // Return value as needed
 }
@@ -1179,8 +1112,6 @@ int SaveImage(const string &filename, const string &newfilename){
 
     string filename3 = filename1 + newfilename; // Copy filename1 to avoid resizing issues
 
-    cout << filename3 << endl;
-
     ifstream file;
     file.open(filename3);
 
@@ -1198,7 +1129,6 @@ int SaveImage(const string &filename, const string &newfilename){
 
     Image temp("temporary_file.jpg");
 
-    cout << filename3 << endl;
     temp.sv("hello.jpg");
     temp.sv(filename3);
     }

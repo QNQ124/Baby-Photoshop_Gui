@@ -6,8 +6,10 @@ import Qt.labs.folderlistmodel
 
 Window {
 
-    width: 1120
-    height: 520
+    maximumWidth: 1120
+    minimumWidth: 1120
+    maximumHeight: 520
+    minimumHeight: 520
 
     visible: true
     title: qsTr("PicMagic")
@@ -25,7 +27,8 @@ Window {
     property string filename: ""
     property color baseColor12: "white"
     property string temporaryFile: "file:///C:/Users/Domain/OneDrive - techno mix/Documents/First_GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/temporary_file.jpg"
-    property alias fileone: fileOpenDialog.currentFile
+    property int image1_width: 0
+    property int image1_height: 0
     Rectangle {
         id: mainSection
 
@@ -1190,7 +1193,7 @@ Window {
                     text: "Choose another image"
                     onTriggered: {
                         fileOpenDialog1.open()
-                        filter13.color = "#44BD58"
+                        filter13.color = "#A18DC6"
                         filename = fileOpenDialog1.currentFile
                     }
                 }
@@ -1200,7 +1203,7 @@ Window {
                 if (fileOpenDialog.currentFile != "") {
                     if (filename === "") {
                         fileOpenDialog1.open()
-                        filter13.color = "#ae58ff"
+                        filter13.color = "#A18DC6"
                     } else {
                         menu1.open()
                         filter13.color = "white"
@@ -2468,7 +2471,6 @@ Window {
 
             onClicked: {
                 if (fileOpenDialog.currentFile != "") {
-                    console.log(fileOpenDialog.currentFile)
                     popup4.open()
                     return
                 }
@@ -2639,6 +2641,10 @@ Window {
                     var fileName = fileOpenDialog.currentFile
                     first_image.source = fileName
                     second_image.source = ""
+                    image1_height = imageProcessor22.checkCropHeight(
+                                fileOpenDialog.currentFile)
+                    image1_width = imageProcessor21.checkCropWidth(
+                                fileOpenDialog.currentFile)
                 } else {
                     first_image.source = "assets/images/log.jpg"
                 }
@@ -2710,7 +2716,7 @@ Window {
             id: imageText3
             width: 58
             height: 23
-            color: "#000000"
+            color: "#666666"
             text: "Image_Path: "
             anchors.verticalCenter: imageText4.verticalCenter
             anchors.left: imageText4.right
@@ -2733,7 +2739,7 @@ Window {
             width: 416
             height: 23
             text: fileOpenDialog.currentFile
-            color: "#000000"
+            color: "#666666"
             font.pixelSize: 10
             font.italic: true
             anchors.horizontalCenterOffset: 35
@@ -2780,7 +2786,7 @@ Window {
             y: 5
             width: 416
             height: 23
-            color: "#000000"
+            color: "#666666"
             text: "Saved Image will be saved in the same Folder"
             font.pixelSize: 10
             font.italic: true
@@ -2801,11 +2807,25 @@ Window {
         font.italic: true
         anchors.horizontalCenterOffset: -28
     }
+
+    Text {
+        id: imagesize
+        x: 101
+        y: 76
+        width: 64
+        height: 31
+        color: "#666666"
+        text: "Image Size: " + " " + image1_width + " " + "*" + " " + image1_height
+        font.pixelSize: 10
+        font.italic: true
+        anchors.horizontalCenterOffset: -28
+    }
 }
 
 /*##^##
 Designer {
-    D{i:0}D{i:3}D{i:5}D{i:6}D{i:7;locked:true}D{i:8;locked:true}D{i:9;locked:true}D{i:10;locked:true}
+    D{i:0}D{i:1;locked:true}D{i:2;locked:true}D{i:3;locked:true}D{i:4;locked:true}D{i:5;locked:true}
+D{i:6;locked:true}D{i:7;locked:true}D{i:8;locked:true}D{i:9;locked:true}D{i:10;locked:true}
 D{i:11;locked:true}D{i:12;locked:true}D{i:13;locked:true}D{i:14;locked:true}D{i:15;locked:true}
 D{i:16;locked:true}D{i:17;locked:true}D{i:18;locked:true}D{i:19;locked:true}D{i:20;locked:true}
 D{i:21;locked:true}D{i:22;locked:true}D{i:23;locked:true}D{i:24;locked:true}D{i:25;locked:true}
@@ -2814,21 +2834,24 @@ D{i:31;locked:true}D{i:32;locked:true}D{i:33;locked:true}D{i:34;locked:true}D{i:
 D{i:36;locked:true}D{i:37;locked:true}D{i:38;locked:true}D{i:39;locked:true}D{i:40;locked:true}
 D{i:41;locked:true}D{i:42;locked:true}D{i:43;locked:true}D{i:44;locked:true}D{i:45;locked:true}
 D{i:46;locked:true}D{i:47;locked:true}D{i:48;locked:true}D{i:49;locked:true}D{i:50;locked:true}
-D{i:51;locked:true}D{i:52;locked:true}D{i:54;locked:true}D{i:58;locked:true}D{i:59;locked:true}
-D{i:60;locked:true}D{i:61;locked:true}D{i:67;locked:true}D{i:68;locked:true}D{i:69;locked:true}
-D{i:70;locked:true}D{i:71;locked:true}D{i:72;locked:true}D{i:73;locked:true}D{i:74;locked:true}
-D{i:75;locked:true}D{i:76;locked:true}D{i:77;locked:true}D{i:78;locked:true}D{i:82;locked:true}
+D{i:51;locked:true}D{i:52;locked:true}D{i:54;locked:true}D{i:57;locked:true}D{i:58;locked:true}
+D{i:59;locked:true}D{i:60;locked:true}D{i:61;locked:true}D{i:65;locked:true}D{i:66;locked:true}
+D{i:67;locked:true}D{i:68;locked:true}D{i:69;locked:true}D{i:70;locked:true}D{i:71;locked:true}
+D{i:72;locked:true}D{i:73;locked:true}D{i:74;locked:true}D{i:75;locked:true}D{i:76;locked:true}
+D{i:77;locked:true}D{i:78;locked:true}D{i:82;locked:true}D{i:86;locked:true}D{i:87;locked:true}
 D{i:88;locked:true}D{i:89;locked:true}D{i:90;locked:true}D{i:94;locked:true}D{i:96;locked:true}
-D{i:101;locked:true}D{i:104;locked:true}D{i:105;locked:true}D{i:106;locked:true}D{i:111;locked:true}
-D{i:112;locked:true}D{i:113;locked:true}D{i:119;locked:true}D{i:121;locked:true}D{i:125;locked:true}
-D{i:127;locked:true}D{i:129;locked:true}D{i:130;locked:true}D{i:131;locked:true}D{i:135;locked:true}
-D{i:136;locked:true}D{i:137;locked:true}D{i:142;locked:true}D{i:143;locked:true}D{i:144;locked:true}
-D{i:145;locked:true}D{i:146;locked:true}D{i:147;locked:true}D{i:148;locked:true}D{i:149;locked:true}
-D{i:150;locked:true}D{i:151;locked:true}D{i:152;locked:true}D{i:153;locked:true}D{i:154;locked:true}
-D{i:155;locked:true}D{i:158;locked:true}D{i:164;locked:true}D{i:165;locked:true}D{i:166;locked:true}
-D{i:167;locked:true}D{i:168;locked:true}D{i:170;locked:true}D{i:171;locked:true}D{i:172;locked:true}
-D{i:173;locked:true}D{i:174;locked:true}D{i:175;locked:true}D{i:176;locked:true}D{i:177;locked:true}
-D{i:178;locked:true}D{i:179;locked:true}D{i:180;locked:true}D{i:181;locked:true}
+D{i:101;locked:true}D{i:102;locked:true}D{i:103;locked:true}D{i:104;locked:true}D{i:105;locked:true}
+D{i:106;locked:true}D{i:109;locked:true}D{i:110;locked:true}D{i:111;locked:true}D{i:112;locked:true}
+D{i:113;locked:true}D{i:119;locked:true}D{i:121;locked:true}D{i:125;locked:true}D{i:127;locked:true}
+D{i:128;locked:true}D{i:129;locked:true}D{i:130;locked:true}D{i:131;locked:true}D{i:133;locked:true}
+D{i:134;locked:true}D{i:135;locked:true}D{i:136;locked:true}D{i:137;locked:true}D{i:140;locked:true}
+D{i:141;locked:true}D{i:142;locked:true}D{i:143;locked:true}D{i:144;locked:true}D{i:145;locked:true}
+D{i:146;locked:true}D{i:147;locked:true}D{i:148;locked:true}D{i:149;locked:true}D{i:150;locked:true}
+D{i:151;locked:true}D{i:152;locked:true}D{i:153;locked:true}D{i:154;locked:true}D{i:155;locked:true}
+D{i:158;locked:true}D{i:162;locked:true}D{i:163;locked:true}D{i:164;locked:true}D{i:165;locked:true}
+D{i:166;locked:true}D{i:167;locked:true}D{i:168;locked:true}D{i:169;locked:true}D{i:170;locked:true}
+D{i:171;locked:true}D{i:172;locked:true}D{i:173;locked:true}D{i:174;locked:true}D{i:175;locked:true}
+D{i:176;locked:true}D{i:177;locked:true}D{i:178;locked:true}D{i:179;locked:true}D{i:180}
 }
 ##^##*/
 
