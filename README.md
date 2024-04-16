@@ -1,1 +1,1 @@
-# Baby-Photoshop_Gui
+# PicMagic_Gui
