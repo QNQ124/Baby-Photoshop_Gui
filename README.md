@@ -36,9 +36,12 @@ The PicMagic GUI is an ImageProcessing Gui is designed to provide users with a u
           assets/images/image.png
           assets/images/image1.png
           assets/images/log.jpg
-     ) ```
+     )
+     ```
 3) Do not change anything or file not mentioned here
 # Contributors
-Ibrahim Mohamed Saad - QNQ124
-Ahmed Hussein Mohamed Ahmed - HaZrDoOo0 
-Ezz eldin Omar Abd El-latif - ezzeldin2005
+Ibrahim Mohamed Saad - [QNQ124](https://github.com/QNQ124)
+
+Ahmed Hussein Mohamed Ahmed - [HaZrDoOo0](https://github.com/HaZrDoOo0)
+
+Ezz eldin Omar Abd El-latif - [ezzeldin2005](https://github.com/ezzeldin2005)
