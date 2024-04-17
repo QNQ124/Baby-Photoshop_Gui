@@ -33,7 +33,7 @@ The PicMagic GUI is an ImageProcessing Gui is designed to provide users with a u
 # Problems expected to be encountered
 1) You have not taken some of the steps mentioned. You must do them and read them carefully
 
-2) Make sure the following code is present in [ CMakeLists.txt ] in Qt Creator at line contains qt_add_qml_module():
+2) Make sure the following code is present in [ CMakeLists.txt ] in Qt Creator at line contains qt_add_qml_module() or qt_add_executable():
 
      ```
       VERSION 1.0
@@ -41,11 +41,6 @@ The PicMagic GUI is an ImageProcessing Gui is designed to provide users with a u
           QML_FILES AutoInfoBox.qml Main.qml
           SOURCES Main.cpp ImageProcessing.pro ImageProcessor.cpp
           SOURCES ImageProcessor.h Image_Class.h stb_image.h stb_image_write.h
-
-      RESOURCES
-          assets/images/image1.png
-          assets/images/log.jpg
-      )
      ```
 3) Make sure in main.cpp and cmake if exists word like ( First_GUI ) replace it with your project name
 
