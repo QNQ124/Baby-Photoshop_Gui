@@ -79,14 +79,16 @@
           assets/images/image1.png
           assets/images/log.jpg
 
-     4. Make sure in main.cpp and cmake if exists word like ( First_GUI ) replace it with your project name
+     3. Make sure in main.cpp and cmake if exists word like ( First_GUI ) replace it with your project name
 
-     5. Make sure you create assets folder and images folder in it and move images in folder images in repo in it
+     4. Make sure you create assets folder and images folder in it and move images in folder images in repo in it
 
-     6. Make sure you move temporary_file.jpg like step ( 3 ) in the last main menu
+     5. Make sure you move temporary_file.jpg like step ( 3 ) in the last main menu
 
-     7. if app doesn't run you. It will be necessary to create files with the same name in Project and copy each
+     6. if app doesn't run you. It will be necessary to create files with the same name in Project and copy each
         symbol into its own file
+
+     7. if you have problem in shape of popup un some filter, you can replace main.qml to main.qml in aonther qml folder
 
      8. Do not change anything or file not mentioned here
 
