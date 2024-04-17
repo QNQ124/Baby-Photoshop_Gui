@@ -55,7 +55,9 @@ The PicMagic GUI is an ImageProcessing Gui is designed to provide users with a u
 
 6) if app doesn't run you. It will be necessary to create files with the same name in Project and copy each symbol into its own file
 
-7) Do not change anything or file not mentioned here
+7) if you have problem in shape of popup un some filter, you can replace main.qml to main.qml in aonther qml folder
+
+8) Do not change anything or file not mentioned here
 
 # Contributors
 Ibrahim Mohamed Saad - [QNQ124](https://github.com/QNQ124)
