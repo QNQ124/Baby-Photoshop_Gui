@@ -15,16 +15,15 @@ The PicMagic GUI is an ImageProcessing Gui is designed to provide users with a u
 # Steps to setup and run Gui
 1) install Qt Framework:
    
-you must choose version Q 6.7.0 you can enter this link to know how install Qt [ https://youtu.be/wR_jXBUW11g?si=imG2NI6KZ3FYLBbO ] Until minute 9:30 but when choose version. you must choose version Q 6.7.0
+   you must choose version Q 6.7.0 you can enter this link to know how install Qt [ https://youtu.be/wR_jXBUW11g?si=imG2NI6KZ3FYLBbO ] Until minute 9:30 but       when choose version. you must choose version Q 6.7.0
 
 2) After install Qt Framework:
 
-Click on create new Project and you will find in the repo link Attached above [PicMagic_GUI],Then you will go to the location of the project in file explorer you created and replace the files with [main.cpp, ImageProcessor.cpp] in Source Files and [AutoInfoBox.qml, Main.qml, ImageProcessing.pro] in appPicMagic_Gui and [ImageProcessor.h, stb_image_write.h, stb_image.h, Image_Class.h] in Header Files and [assets folder] in Resources
+   Click on create new Project and you will find in the repo link Attached above [PicMagic_GUI],Then you will go to the location of the project in file            explorer you created and replace the files with [main.cpp, ImageProcessor.cpp] in Source Files and [AutoInfoBox.qml, Main.qml, ImageProcessing.pro] in          appPicMagic_Gui and [ImageProcessor.h, stb_image_write.h, stb_image.h, Image_Class.h] in Header Files and [assets folder] in Resources
    
 3) Run Application:
    
-The last step is to go to [ File explorer => Project location => Build => Desktop_Qt_6_7_0_MinGW_64_bit-Debug ] and copy the path, then go to Qt Creator and open Main.qml and go to line 29 which contains property string temporaryFile: You will put between the Double Quotes " " The path you copied and at the end is /temporary_file.jpg Now You can press on Ctrl + s , after that press on Ctrl + r , if app doesn't 
-Run, Then read Error list at the Bottom
+   The last step is to go to [ File explorer => Project location => Build => Desktop_Qt_6_7_0_MinGW_64_bit-Debug ] and copy the path, then go to Qt Creator and    open Main.qml and go to line 29 which contains property string temporaryFile: You will put between the Double Quotes " " The path you copied and at the end     is /temporary_file.jpg Now You can press on Ctrl + s , after that press on Ctrl + r , if app doesn't Run, Then read Error list at the Bottom
 
 # Problems expected to be encountered
 1) You have not taken some of the steps mentioned. You must do them and read them carefully
