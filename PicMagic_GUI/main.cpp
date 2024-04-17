@@ -1,7 +1,7 @@
 // ==================================================================================== //
 // FCAI – Structured Programming – 2024 - Assignment                                    //
 //                                                                                      //
-// File:    CS112_A3_Part3_S5S6_20230003_20230016_20230233.cpp                          //
+// File:    main.cpp                                                                    //
 //                                                                                      //
 // Purpose: This program allows users to Applying filters to images It                  //
 //          provides a user-friendly menu for selecting filters and                     //
@@ -17,8 +17,12 @@
 //          ezzeldinomar7@gmail.com                                                     //
 //                                                                                      //
 // TA name: Rana Abdelkader                                                             //
-// Date:    4/14/2024                                                                   //
-// Version: 3.0                                                                         //
+// Date:    4/17/2024                                                                   //
+// Version: 4.0                                                                         //
+// ==================================================================================== //
+
+// ==================================================================================== //
+//              Repository Link: https://github.com/QNQ124/PicMagic_Gui                 //
 // ==================================================================================== //
 
 #include <QGuiApplication>

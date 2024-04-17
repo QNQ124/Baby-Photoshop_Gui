@@ -1,3 +1,31 @@
+// ==================================================================================== //
+// FCAI – Structured Programming – 2024 - Assignment                                    //
+//                                                                                      //
+// File:    main.cpp                                                                    //
+//                                                                                      //
+// Purpose: This program allows users to Applying filters to images It                  //
+//          provides a user-friendly menu for selecting filters and                     //
+//          saving the modified images.                                                 //
+//                                                                                      //
+// Author:  Ibrahim Mohamed Saad Mohamed_S6_20230003 => Filter 1, 4, 7, 10, 13, 15      //
+//          Ahmed Hussein Mohamed Ahmed_S5_20230016  => Filter 2, 5, 8, 11, 14, 18      //
+//          Ezz eldin Omar Abd El-latif_S6_20230233  => Filter 3, 6, 9, 12, 16, 17      //
+//          TeamWork => Filter 19, 20                                                   //
+//                                                                                      //
+// Emails:  hes93314@gmail.com                                                          //
+//          hzrdu3500@gmail.com                                                         //
+//          ezzeldinomar7@gmail.com                                                     //
+//                                                                                      //
+// TA name: Rana Abdelkader                                                             //
+// Date:    4/17/2024                                                                   //
+// Version: 4.0                                                                         //
+// ==================================================================================== //
+
+// ==================================================================================== //
+//              Repository Link: https://github.com/QNQ124/PicMagic_Gui                 //
+// ==================================================================================== //
+
+
 #include <string>
 #include <iostream>
 #include <fstream>

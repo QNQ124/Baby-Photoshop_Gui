@@ -1495,10 +1495,9 @@ Window {
                             }
 
                             if (widthInput1 <= 0 || heightInput1 <= 0 || isNaN(
-                                        heightInput1) || isNaN(
-                                        widthInput1) || isNaN(xpoint) || isNaN(
-                                        ypoint) || (widthInput1 > original_width) || (heightInput1 > original_height) || ((xpoint + widthInput1) > original_width)
-                                    || ((ypoint + heightInput1) > original_height)) {
+                                        heightInput1) || xpoint < 0 || ypoint
+                                    < 0 || isNaN(widthInput1) || isNaN(
+                                        xpoint) || isNaN(ypoint) || (widthInput1 > original_width) || (heightInput1 > original_height) || ((xpoint + widthInput1) > original_width) || ((ypoint + heightInput1) > original_height)) {
                                 errorText3.visible = true
                                 return
                             }

@@ -21,7 +21,7 @@ The PicMagic GUI is an ImageProcessing Gui is designed to provide users with a u
    
    Click on create new Project and It is called the same name as the folder in the project that you will find in the repo link Attached above 
    [PicMagic_GUI],Then you will go to the location of the project in file explorer you created and replace the entire folder with the folder from the project 
-   located in the repo.
+   located in the repo. if it says to you it is not allow to replace debug file you can press skip
 
 3) Verifying files in Qt:
    

@@ -300,8 +300,8 @@ C:/Users/Domain/OneDrive - techno mix/Documents/First_GUI/ImageProcessor.h
  mdp:D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/time.h
  mdp:D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/vadefs.h
  mdp:D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h
-C:/Users/Domain/OneDrive - techno mix/Documents/First_GUI/ImageProcessor.cpp
 C:/Users/Domain/OneDrive - techno mix/Documents/First_GUI/Image_Class.h
+C:/Users/Domain/OneDrive - techno mix/Documents/First_GUI/ImageProcessor.cpp
 C:/Users/Domain/OneDrive - techno mix/Documents/First_GUI/stb_image.h
 C:/Users/Domain/OneDrive - techno mix/Documents/First_GUI/stb_image_write.h
 C:/Users/Domain/OneDrive - techno mix/Documents/First_GUI/main.cpp
