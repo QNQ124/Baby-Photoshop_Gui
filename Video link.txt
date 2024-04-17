@@ -1,0 +1,22 @@
+// ==================================================================================== //
+// FCAI – Structured Programming – 2024 - Assignment                                    //
+//                                                                                      //
+// Folder:  PicMagic_Gui                                                                //
+//                                                                                      //
+// Purpose: The PicMagic GUI is an ImageProcessing Gui is designed to provide           //
+//	    users with a user-friendly interface for performing various image           //
+//          processing tasks. It allows users to load images in different formats       //
+//          (such as JPEG, JPG, PNG, BMP) and provides them with tools to manipulate    //
+//          and enhance these images.                                                   // 
+//                                                                                      //
+// Author:  Ibrahim Mohamed Saad Mohamed_S6_20230003                                    //
+//          Ahmed Hussein Mohamed Ahmed_S5_20230016                                     //
+//          Ezz eldin Omar Abd El-latif_S6_20230233                                     //                                                                                
+//                                                                                      //
+// Date:    4/16/2024                                                                   //
+// Version: 1.0                                                                         //
+// ==================================================================================== //
+
+// ==================================================================================== //
+//                     Video Link: https://youtu.be/VqzuOVokSIk                         //
+// ==================================================================================== //
