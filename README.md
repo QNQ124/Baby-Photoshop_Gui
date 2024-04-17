@@ -23,15 +23,17 @@ The PicMagic GUI is an ImageProcessing Gui is designed to provide users with a u
    
 3) Run Application:
    
-   The last step is to go to [ File explorer => Project location => Build => Desktop_Qt_6_7_0_MinGW_64_bit-Debug ] and copy the path, then go to Qt Creator and    open Main.qml and go to line 29 which contains property string temporaryFile: You will put between the Double Quotes " " The path you copied and at the end     is /temporary_file.jpg Now You can press on Ctrl + s , after that press on Ctrl + r , if app doesn't Run, Then read Error list at the Bottom
+   The last step is to go to [ File explorer => Project location => Build => Desktop_Qt_6_7_0_MinGW_64_bit-Debug ] and copy temporary_file.jpg you will
+   find in repo in images folder and copy the path, then go to Qt Creator and open Main.qml and go to line 29 which contains property string temporaryFile:
+   You will put between the Double Quotes " " The path you copied and at the end is / Now You can press on Ctrl + s , after that press on Ctrl + r , if app 
+   doesn't Run, Then read Error list at the Bottom
 
 # Problems expected to be encountered
 1) You have not taken some of the steps mentioned. You must do them and read them carefully
 
-2) Make sure the following code is present in [ CMakeLists.txt ] in Qt Creator:
+2) Make sure the following code is present in [ CMakeLists.txt ] in Qt Creator at line contains qt_add_qml_module():
+
      ```
-      qt_add_qml_module(appFirst_GUI
-      URI First_GUI
       VERSION 1.0
       QML_FILES
           QML_FILES AutoInfoBox.qml Main.qml
@@ -39,12 +41,19 @@ The PicMagic GUI is an ImageProcessing Gui is designed to provide users with a u
           SOURCES ImageProcessor.h Image_Class.h stb_image.h stb_image_write.h
 
       RESOURCES
-          build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/temporary_file.jpg
           assets/images/image1.png
           assets/images/log.jpg
       )
      ```
-3) Do not change anything or file not mentioned here
+3) Make sure in main.cpp and cmake if exists word like ( First_GUI ) replace it with your project name
+
+4) Make sure you create assets folder and images folder in it and move images in folder images in repo in it
+
+5) make sure you move temporary_file.jpg like step ( 3 ) in the last main menu
+
+6) if app doesn't run you. It will be necessary to create files with the same name in Project and copy each symbol into its own file
+
+7) Do not change anything or file not mentioned here
 
 # Contributors
 Ibrahim Mohamed Saad - [QNQ124](https://github.com/QNQ124)
