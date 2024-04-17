@@ -19,7 +19,9 @@ The PicMagic GUI is an ImageProcessing Gui is designed to provide users with a u
 
 2) After install Qt Framework:
 
-   Click on create new Project and you will find in the repo link Attached above [PicMagic_GUI],Then you will go to the location of the project in file            explorer you created and replace the files with [main.cpp, ImageProcessor.cpp] in Source Files and [AutoInfoBox.qml, Main.qml, ImageProcessing.pro] in          appPicMagic_Gui and [ImageProcessor.h, stb_image_write.h, stb_image.h, Image_Class.h] in Header Files and [assets folder] in Resources
+   Click on create new Project and named it [First_GUI], Then you will go to the location of the project in file explorer you created and replace the files 
+   with [main.cpp, ImageProcessor.cpp] in Source Files and [AutoInfoBox.qml, Main.qml, ImageProcessing.pro] in appPicMagic_Gui and [ImageProcessor.h, 
+   stb_image_write.h, stb_image.h, Image_Class.h] in Header Files and [assets folder] in Resources
    
 3) Run Application:
    
