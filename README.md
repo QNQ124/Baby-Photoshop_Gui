@@ -44,15 +44,17 @@ The PicMagic GUI is an ImageProcessing Gui is designed to provide users with a u
      ```
 3) Make sure in main.cpp and cmake if exists word like ( First_GUI ) replace it with your project name
 
-4) Make sure you create assets folder and images folder in it and move images in folder images in repo in it
+4) if you encounter [ cannot find directory of main.qml file ]. Go to Main.cpp file at line 112 and put main.qml file path in your project
 
-5) make sure you move temporary_file.jpg like step ( 3 ) in the last main menu
+5) Make sure you create assets folder and images folder in it and move images in folder images in repo in it
 
-6) if app doesn't run you. It will be necessary to create files with the same name in Project and copy each symbol into its own file
+6) make sure you move temporary_file.jpg like step ( 3 ) in the last main menu
 
-7) if you have problem in shape of popup un some filter, you can replace main.qml to main.qml in aonther qml folder
+7) if app doesn't run you. It will be necessary to create files with the same name in Project and copy each symbol into its own file
 
-8) Do not change anything or file not mentioned here
+8) if you have problem in shape of popup un some filter, you can replace main.qml to main.qml in aonther qml folder
+
+9) Do not change anything or file not mentioned here
 
 # Contributors
 Ibrahim Mohamed Saad - [QNQ124](https://github.com/QNQ124)
